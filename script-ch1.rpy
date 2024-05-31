@@ -60,6 +60,42 @@ label truth_reveal:
     "و اینطوری، ترول فیس ناپدید شد، اما خنده و شادی که او به باشگاه آورده بود، همیشه با ما می‌ماند."
     return
 
+            note_path = os.path.join(renpy.config.basedir, renpy.substitute("game/Your award.txt"))
+            note_text = renpy.substitute("""\ 
+label confrontation:
+    mc "چیزها دیگر مثل قبل نیستند. ترولج دیگر فقط یک شوخی‌کننده نیست، او تبدیل به یک تهدید واقعی شده است."
+    show sayori with a look of determination
+    s "ما نمی‌توانیم اجازه دهیم که او ما را به این راه‌های خطرناک بکشاند. باید جلوی او را بگیریم."
+    show yuri clenching her fists
+    y "بله، ما باید متحد شویم و با او مقابله کنیم. نمی‌توانیم اجازه دهیم که او ما را نابود کند."
+
+    show natsuki stepping forward
+    n "من همیشه برای یک نبرد آماده‌ام. بیایید نشان دهیم که ما از چه جنسی هستیم!"
+    show monika with a serious expression
+    m "ما باید صداهایی که او را به این کارها وادار می‌کنند را قطع کنیم. شاید ما بتوانیم او را نجات دهیم."
+
+    # The club members face Trollface in a decisive confrontation
+    show trollface at center with a mischievous grin
+    trollface "هاها، فکر می‌کنید می‌توانید من را شکست دهید؟ من همیشه یک قدم جلوتر هستم."
+    mc "ما دیگر به تو اعتماد نداریم، ترولج. ما می‌دانیم که تو چه نقشه‌ای داری و ما اجازه نخواهیم داد که این اتفاق بیفتد."
+
+    # The club members work together to silence the voices influencing Trollface
+    s "ما باید صداهایی که تو را کنترل می‌کنند را قطع کنیم. تو نیاز به کمک داری، ترولج."
+    trollface "شما... شما واقعاً فکر می‌کنید که می‌توانید به من کمک کنید؟"
+    y "بله، ما همه در این باشگاه یک خانواده هستیم. حتی تو هم جزئی از این خانواده هستی."
+
+    # They successfully silence the voices and save Trollface
+    trollface "من... من دیگر آن صداها را نمی‌شنوم. شما... شما واقعاً مرا نجات دادید."
+    mc "ما همیشه برای یکدیگر وجود داریم، حتی وقتی که سخت‌ترین شرایط پیش می‌آید."
+    trollface "من نمی‌دانم چطور می‌توانم جبران کنم. من برای همیشه به شما مدیون هستم."
+
+    # Trollface becomes a positive force within the club
+    show trollface with a grateful smile
+    trollface "از این به بعد، من می‌خواهم به شما کمک کنم. می‌خواهم بخشی از این خانواده باشم و به شما نشان دهم که من هم می‌توانم مثبت باشم."
+    mc "ما به تو خوش‌آمد می‌گوییم، ترولج. بیایید با هم به سمت آینده‌ای بهتر حرکت کنیم."
+    # The club continues its activities, now with Trollface as a supportive member, and they all grow stronger together.
+""")
+
     if choice =="آرامش؟":
         jump dark_truth
 
