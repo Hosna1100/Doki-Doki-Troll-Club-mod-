@@ -1,45 +1,41 @@
 label ch1_main:
     stop music fadeout 2.0
-    scene bg residential_day
+    scene bg club_day_e
     with dissolve_scene_full
     play music t2
     
-    if choice =="سایه؟":
+    if choice =="shadow?":
         jump truth_reveal
 
 label truth_reveal:
-    mc "بعد از چند روز شوخی و خنده، اعضای باشگاه شروع به تعجب کردند که ترول فیس واقعاً کیست و چه هدفی دارد."
-    show sayori c3 at l41
-    s "فکر می‌کنید ترول فیس واقعاً کیست؟ منظورم اینه که، او همیشه اینجاست ولی ما هیچوقت در موردش چیزی نمی‌دانیم."
-    show yuri h2 at t42
-    y "من هم در موردش فکر کرده‌ام. او همیشه برای ما معما می‌آورد، اما هیچوقت در مورد خودش چیزی نمی‌گوید."
-
-    show natsuki 5y at t43
-    n "خب، من فکر می‌کنم وقتشه که بفهمیم. ما باید یک نقشه بکشیم و حقیقت را کشف کنیم!"
-    show monika 3b at t44
-    m "ایده خوبیه، ناتسوکی. ما می‌توانیم از شوخی‌های ترول فیس استفاده کنیم تا او را به چالش بکشیم و بفهمیم او واقعاً چه کسی است."
-
-    "The club members set up a plan to discover Trollface's true identity"
-    mc "باشه، پس چه نقشه‌ای داریم؟"
-    s 4r"ما می‌توانیم یک معمای خیلی سخت برای او بسازیم! اگر او نتواند آن را حل کند، باید به ما بگوید که واقعاً کیست!"
-    y 2b"و ما می‌توانیم از دانش ادبیات خود استفاده کنیم تا معمایی بسازیم که فقط یک عضو واقعی باشگاه می‌تواند حل کند."
-    n 4l"عالیه! بیایید شروع کنیم."
-    show trollface 3b at t11
+    mc "after some days of joke and laughter, club members started suspect Trollface that who he is and what his aim is." 
+    show sayori c3 zorder 2 at t41
+    s "you think who Trollface really is? I mean, he's always there and we never know anything about him." 
+    show yuri h2 zorder 2 at t42
+    y "I thought about it too. he always brings mystery for us but never says anything about himself." 
+    show natsuki 5y zorder 2 at t43
+    n "well, I think it's time to face it. we should make a plan and face the truth!" 
+    show monika 3b zorder 2 at t44
+    m "good idea, Natsuki. we can use Trollface's jokes to challenge him and face who he really is." 
+    mc "alright, so what's our plan?"
+    show sayori c3 zorder 2 at t41
+    s 4r"we can create a difficult mystery for him! if he can't slove it, he should tell us who he really is!"
+    show yuri h2 zorder 2 at t41 
+    y 2b"and we can use our literature knowledge to make a mystery that a real literature club member can solve."
+    show natsuki 4l zorder 2 at t43
+    n 4l"great! let's start!"
+    hide monika
+    show natsuki 4s zorder 2 at t43
+    show trollface 3b zorder 1 at t11
     trollface "هاها، شما دوباره منتظر شوخی‌های من هستید؟"
     mc "امروز نوبت ماست که برای تو یک چالش داشته باشیم، ترول فیس."
-    trollface "واقعاً؟ خوب، بیایید ببینیم شما چه کاری می‌توانید انجام دهید."
-
-    "The club members present a literary riddle that only a true literature enthusiast would know"
+    trollface "واقعاً؟ خوب، بیایید ببینیم شما چه کاری می‌توانید انجام دهید"
     s "خوب، این معمای ماست: 'چیزی که در کتاب‌ها زندگی می‌کند اما هرگز نفس نمی‌کشد، چیست؟'"
     trollface 1j"این سوال خیلی ساده است! جواب..."
-    "Trollface is unable to answer the riddle"
     trollface 2o"من... من نمی‌دانم."
     mc "پس، حالا وقتشه که حقیقت را بگویی. تو واقعاً کیستی؟"
-
-    "Trollface reveals his true identity"
     show trollface 3a at f11
     trollface "خوب، شما مرا گرفتید. من واقعاً..."
-    "The script can reveal that Trollface is actually a manifestation of the club's desire for fun and laughter"
     trollface 2b"یک تجسم از خواسته‌های شما برای سرگرمی و خنده هستم. من اینجا بودم تا به شما نشان دهم که گاهی اوقات، شما باید فقط بخندید و از زندگی لذت ببرید."
     mc "پس، همه این مدت، تو فقط می‌خواستی به ما کمک کنی تا شاد باشیم؟"
     trollface 1j"دقیقاً! و به نظر می‌رسد که کار من تمام شده است. شما همه یاد گرفته‌اید که چگونه خودتان را سرگرم کنید."
@@ -60,64 +56,30 @@ label truth_reveal:
     "و اینطوری، ترول فیس ناپدید شد، اما خنده و شادی که او به باشگاه آورده بود، همیشه با ما می‌ماند."
     return
 
-            note_path = os.path.join(renpy.config.basedir, renpy.substitute("game/Your award.txt"))
-            note_text = renpy.substitute("""\ 
-label confrontation:
-    mc "چیزها دیگر مثل قبل نیستند. ترولج دیگر فقط یک شوخی‌کننده نیست، او تبدیل به یک تهدید واقعی شده است."
-    show sayori with a look of determination
-    s "ما نمی‌توانیم اجازه دهیم که او ما را به این راه‌های خطرناک بکشاند. باید جلوی او را بگیریم."
-    show yuri clenching her fists
-    y "بله، ما باید متحد شویم و با او مقابله کنیم. نمی‌توانیم اجازه دهیم که او ما را نابود کند."
-
-    show natsuki stepping forward
-    n "من همیشه برای یک نبرد آماده‌ام. بیایید نشان دهیم که ما از چه جنسی هستیم!"
-    show monika with a serious expression
-    m "ما باید صداهایی که او را به این کارها وادار می‌کنند را قطع کنیم. شاید ما بتوانیم او را نجات دهیم."
-
-    # The club members face Trollface in a decisive confrontation
-    show trollface at center with a mischievous grin
-    trollface "هاها، فکر می‌کنید می‌توانید من را شکست دهید؟ من همیشه یک قدم جلوتر هستم."
-    mc "ما دیگر به تو اعتماد نداریم، ترولج. ما می‌دانیم که تو چه نقشه‌ای داری و ما اجازه نخواهیم داد که این اتفاق بیفتد."
-
-    # The club members work together to silence the voices influencing Trollface
-    s "ما باید صداهایی که تو را کنترل می‌کنند را قطع کنیم. تو نیاز به کمک داری، ترولج."
-    trollface "شما... شما واقعاً فکر می‌کنید که می‌توانید به من کمک کنید؟"
-    y "بله، ما همه در این باشگاه یک خانواده هستیم. حتی تو هم جزئی از این خانواده هستی."
-
-    # They successfully silence the voices and save Trollface
-    trollface "من... من دیگر آن صداها را نمی‌شنوم. شما... شما واقعاً مرا نجات دادید."
-    mc "ما همیشه برای یکدیگر وجود داریم، حتی وقتی که سخت‌ترین شرایط پیش می‌آید."
-    trollface "من نمی‌دانم چطور می‌توانم جبران کنم. من برای همیشه به شما مدیون هستم."
-
-    # Trollface becomes a positive force within the club
-    show trollface with a grateful smile
-    trollface "از این به بعد، من می‌خواهم به شما کمک کنم. می‌خواهم بخشی از این خانواده باشم و به شما نشان دهم که من هم می‌توانم مثبت باشم."
-    mc "ما به تو خوش‌آمد می‌گوییم، ترولج. بیایید با هم به سمت آینده‌ای بهتر حرکت کنیم."
-    # The club continues its activities, now with Trollface as a supportive member, and they all grow stronger together.
-""")
-
     if choice =="آرامش؟":
         jump dark_truth
 
 label dark_truth:
     "بعد از هفته‌هایی پر از خنده و شوخی، اعضای باشگاه شروع به تردید کردند. شاید ترول فیس اهداف دیگری داشته باشد..."
-    show sayori 1g at f41
+    show sayori 1g zorder 2 at f41
     s "دوستان، من نگرانم. شاید ترول فیس دلایل دیگری برای حضورش داشته باشد."
-    show yuri 2f at t42
+    show yuri 2f zorder 2 at t42
     y "بله، من هم احساس می‌کنم که چیزهایی پنهان است. مثل اینکه هر شوخی یک پیام مخفی دارد."
-    show natsuki 1e at h43
+    show natsuki 1e zorder 2 at h43
     n "ما باید کاری کنیم. نمی‌توانیم اجازه دهیم که او با ما بازی کند!"
-    show monika 4i at t44
+    show monika 4i zorder 2 at t44
     m "درسته. باید حقیقت را کشف کنیم. باید بفهمیم ترول فیس واقعاً چه نقشه‌ای دارد."
     mc "خوب، چطور می‌خواهیم این کار را انجام دهیم؟"
     s "ما باید او را به چالش بکشیم. باید از او بخواهیم که حقیقت را بگوید."
     y "و اگر نگفت، ما باید او را مجبور کنیم."
-
-    show trollface 1b at t11
+    hide yuri
+    hide monika
+    hide sayori
+    show trollface 1b zorder 2 at t11
     trollface "هاها، آماده برای شوخی جدید من هستید؟"
     mc "نه، امروز ما برای تو یک سوال داریم، ترول فیس. تو واقعاً کیستی و چه می‌خواهی؟"
     trollface "چه سوال جالبی! فکر می‌کنید آماده شنیدن جواب هستید؟"
-    show trollface 2i at f11
+    show trollface 2i zorder 2 at f11
     trollface "من نه تنها برای خنده آمده‌ام. من آمده‌ام تا شما را آزمایش کنم، تا ببینم آیا واقعاً می‌توانید با واقعیت‌های تاریک دنیایتان روبرو شوید."
     mc "واقعیت‌های تاریک؟ تو دقیقاً چه منظوری داری؟"
     trollface "هر شوخی من یک درس بود، یک آزمایش. و شما همه آن را نادیده گرفتید، فقط خندیدید و ادامه دادید."
@@ -134,28 +96,22 @@ label dark_truth:
 
 label twisted_intentions:
     "روزها می‌گذرند و شوخی‌های ترول فیس دیگر مثل قبل سرگرم‌کننده نیستند. اعضای باشگاه شروع به نشان دادن رفتارهای عجیبی می‌کنند."
-    show sayori 3h at t41
+    show sayori 3h zorder 2 at t41
     s "من... من نمی‌دانم چرا، اما احساس بدی دارم. انگار که دیگر نمی‌توانم بخندم."
-    show yuri 2r at t42
+    show yuri 2r zorder 2 at t42
     y "و من همیشه عصبانی هستم! این شوخی‌ها... آنها دیگر خنده‌دار نیستند."
-    show natsuki 5f at t43
+    show natsuki 5f zorder 2 at t43
     n "من هم همینطور! این ترول فیس فقط می‌خواهد ما را عصبانی کند!"
-    show monika 2i at t44
+    show monika 2i zorder 2 at t44
     m "من فکر می‌کنم ترول فیس نقشه‌ای دارد. او نمی‌خواهد فقط ما را بخنداند، او می‌خواهد ما را تغییر دهد."
-
-    # The club members decide to confront Trollface about his true motives
     mc "پس باید با او روبرو شویم. باید بفهمیم او واقعاً چه می‌خواهد."
     s "بله، ما باید حقیقت را بدانیم."
     y "ما نمی‌توانیم اجازه دهیم که او با احساسات ما بازی کند."
-
-    # They set up a plan to reveal Trollface's true intentions
-    show trollface 2a at t11
+    show trollface 2a zorder 2 at t11
     trollface "هاها، آماده برای شوخی جدید من هستید؟"
     mc "نه، ما می‌خواهیم بدانیم تو واقعاً چه می‌خواهی، ترول فیس."
     trollface "چه جالب! شما واقعاً فکر می‌کنید که می‌توانید حقیقت را کشف کنید؟"
-
-    # Trollface reveals his dark plan
-    show trollface 1x at t11
+    show trollface 1x zorder 2 at t11
     trollface "من اینجا نیستم فقط برای خنده. من اینجا هستم تا شما را تغییر دهم، تا شما را به چیزی که هرگز فکر نمی‌کردید می‌توانید باشید، تبدیل کنم."
     mc "تغییر ما؟ به چه صورت؟"
     trollface "با هر شوخی، من روح شما را تیره‌تر می‌کنم. با هر خنده، من شما را از درون تغییر می‌دهم."
