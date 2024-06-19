@@ -27,31 +27,31 @@ label truth_reveal:
     hide monika
     show natsuki 4s zorder 2 at t43
     show trollface 3b zorder 1 at t11
-    trollface "هاها، شما دوباره منتظر شوخی‌های من هستید؟"
-    mc "امروز نوبت ماست که برای تو یک چالش داشته باشیم، ترول فیس."
-    trollface "واقعاً؟ خوب، بیایید ببینیم شما چه کاری می‌توانید انجام دهید"
+    trollface "haha, your waiting for my jokes again?"
+    mc "today, is our turn to have a challenge for you, Trollface"
+    trollface "really? well, let's see what you can do."
     s "خوب، این معمای ماست: 'چیزی که در کتاب‌ها زندگی می‌کند اما هرگز نفس نمی‌کشد، چیست؟'"
-    trollface 1j"این سوال خیلی ساده است! جواب..."
-    trollface 2o"من... من نمی‌دانم."
-    mc "پس، حالا وقتشه که حقیقت را بگویی. تو واقعاً کیستی؟"
+    trollface 1j"this question is so easy! the answer is..."
+    trollface 2o"I...I don't know..."
+    mc "so, now is time to tell the truth. Who you really are?"
     show trollface 3a at f11
-    trollface "خوب، شما مرا گرفتید. من واقعاً..."
+    trollface "you really caught me. I am..."
     trollface 2b"یک تجسم از خواسته‌های شما برای سرگرمی و خنده هستم. من اینجا بودم تا به شما نشان دهم که گاهی اوقات، شما باید فقط بخندید و از زندگی لذت ببرید."
     mc "پس، همه این مدت، تو فقط می‌خواستی به ما کمک کنی تا شاد باشیم؟"
     trollface 1j"دقیقاً! و به نظر می‌رسد که کار من تمام شده است. شما همه یاد گرفته‌اید که چگونه خودتان را سرگرم کنید."
-    mc "ترول فیس..."
+    mc "Trollface..."
     hide trollface
     show t_cg1
-    mc "تو خیلی مهربونی..."
-    mc "ببخشید که بهت شک کردیم..."
+    mc "You're so kind..."
+    mc "sorry for suspecting you..."
     hide t_cg1
     show t_cg1_exp1
-    trollface "اشکالی نداره..."
+    trollface "no problem..."
     trollface "حداقل خوشحالم که تونستم شادت کنم..."
     mc "واقعا دلم برای شما تنگ می شود...اگه توانستی بیا بازم بهمان سر بزن!"
     trollface "منم دلم برای همه ی شما تنگ می شود...اگه تونستم بازم میام!"
     hide t_cg1_exp1
-    all "خداحافظ!!!!"
+    "all" "goodbye!!!!!"
     hide trollface
     "و اینطوری، ترول فیس ناپدید شد، اما خنده و شادی که او به باشگاه آورده بود، همیشه با ما می‌ماند."
     return
