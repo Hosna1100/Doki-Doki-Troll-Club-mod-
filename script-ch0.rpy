@@ -22,7 +22,7 @@ label ch0_main:
 
     trollface "well, here's my mystery :'I have something that you always looking for it but you never find it. what am I?" 
     mc "it's so easy! the answer is..."
-    menu:
+    menu choice:
         "game ending?":
             mc "game ending?"
             trollface "no, but it was close. try again next time!"
